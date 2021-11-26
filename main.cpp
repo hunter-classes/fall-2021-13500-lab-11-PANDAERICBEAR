@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "profile.h"
+#include "network.h"
 
 int main(){
   // Profile user("Eric Li", "DUMBPANDABEAR");

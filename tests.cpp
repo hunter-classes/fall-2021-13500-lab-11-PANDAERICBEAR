@@ -1,6 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "profile.h"
+#include "network.h"
 
 TEST_CASE("Task A"){
   Profile user("Eric Li", "DUMBPANDABEAR");
@@ -55,6 +56,4 @@ TEST_CASE("Task C"){
   }
   // additionally, make @mario2 follow @luigi
   nw.follow("mario2", "luigi");
-
-  CHECK(nw.printDot() == "\"@mario\"")
 }
