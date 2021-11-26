@@ -17,4 +17,4 @@ tests.o: tests.cpp doctest.h profile.h
 	g++ -c -std=c++11 tests.cpp
 
 clean:
-	rm -f *.o main tests
+	rm -f *.o main tests *.gch
