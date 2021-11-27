@@ -48,16 +48,20 @@ bool Network::follow(std::string usrn1, std::string usrn2){
 }
 
 void Network::printDot(){
+  std::cout << "digraph {\n\t";
   for (int i = 0; i < numUsers; i++){
-    std::cout << "\"@" + profiles[i].getUsername() + "\"" << std::endl;
+    std::cout << "\"@" + profiles[i].getUsername() + "\"\n\t";
   }
 
   std::cout << std::endl;
   for (int i = 0; i < numUsers; i++){
     for (int j = 0; j < numUsers; j++){
       if (following[i][j]){
-        std::cout << profiles[i].getUsername() + " -> " + profiles[j].getUsername() << std::endl;
+        std::cout << "\t\"@" + profiles[i].getUsername() + "\"" + " -> \"@" + profiles[j].getUsername() + "\"" << std::endl;
       }
     }
   }
+  std::cout << "}\n";
+
+
 }
